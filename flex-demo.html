@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="s1">
+        <input type="text"></input>
+    </div>
+    <div class="s1">
+        <button>按钮</button>
+    </div>
+    <div class="s12">
+        <input type="text"></input>
+    </div>
+    <div class="s1">
+        <button>按钮</button>
+    </div>
+    <div>
+        <button @click=reverseMethod()></button>
+    </div>
+    <p>盒子的多个属性一起动画: width, height, background-color, transform. 将光标悬停在盒子上查看动画。</p>
+    <div class="a">
+         <div class="box"></div>
+        <div class="box1"></div>
+        <button class="btn1" onclick="method1()">按钮1</button>
+        <button class="btn1" onclick="method2()">按钮2</button>
+        <button class="btn1">按钮3</button>
+        <button class="btn1">按钮4</button>
+        <button class="btn1">按钮5</button>
+        <button class="btn1">按钮6</button>
+        <button class="btn1">按钮7</button>
+        <button class="btn1">按钮8</button>
+    </div>
+       
+
+
+
+
+</body>
+
+</html>
+<script>
+    function method1() {
+        alert(1)
+    }
+
+    function method2() {
+        alert(2)
+        let message = 'history'
+        console.log(message)
+        let a = message.split('').reverse().join('')
+        console.log(a)
+    }
+
+    // method3();
+    // method4();
+    // method5();
+    // method6();
+    // method7();
+    // method8();
+    // method9();
+    // method10();
+    // method11();
+    // method12();
+    // method15();
+    // method16();
+    method17();
+
+
+    function method3() {
+        let proxy = new Proxy({}, {
+            get: function (target, property) {
+                return 35;
+            }
+        });
+        console.log(proxy.time)
+        console.log(proxy.name)
+        console.log(proxy.title)
+    }
+
+    function method4() {
+        let person = {
+            name: '小白'
+        }
+        console.log(person[name])
+        let proxy = new Proxy(person, {
+            get: function (target, property) {
+                console.log(target[property])
+                // console.log(target)
+                // console.log(property)
+                if (property in target) {
+                    return target[property]
+                } else {
+                    throw ReferenceError("Property \"" + property + "\" does not exist.")
+                }
+            }
+        })
+        // console.log(proxy.name)
+    }
+
+    function method5() {
+        let arr1 = [1, 2];
+        let arr2 = [3, 4];
+        let arr3 = [arr1, arr2]
+        let arr4 = arr3.map(([a, b]) => a + b)
+        console.log(arr4)
+    }
+
+    function method6() {
+        let arr1 = [1, 2, 3]
+        for (const iterator of arr1) {
+            console.log(iterator)
+        }
+
+        for (const key in arr1) {
+            if (arr1.hasOwnProperty(key)) {
+                const element = arr1[key];
+                console.log(element)
+            }
+        }
+
+        arr1.forEach(element => {
+            console.log(element + 1)
+        });
+    }
+
+    function method7() {
+
+        let map1 = new Map();
+        map1.set('name', 'jim')
+        map1.set('age', '18')
+        console.log(map1)
+        let map2 = new Map();
+        map2.set()
+    }
+
+
+    function method8() {
+        let person = new Object()
+        person.name = 'xiao'
+        person.width = undefined
+        person.minwidth = 129
+        let person2 = new Object()
+        person2.name = 'xiao1'
+        person2.width = undefined
+        person2.minwidth = 100
+        let arr = []
+        arr.push(person)
+        arr.push(person2)
+
+        let arrtest = []
+        for (let iterator of arr) {
+            let person3 = {}
+            if (iterator.name == 'xiao' && person3.width == undefined) {
+                person3.name = iterator.name
+                person3.width = iterator.minwidth
+                arrtest.push(person3)
+            }
+            if (iterator.name == 'xiao1' && person3.width == undefined) {
+                person3.name = iterator.name
+                person3.width = iterator.minwidth
+                arrtest.push(person3)
+            }
+        }
+        console.log(arrtest)
+    }
+
+
+    function method9() {
+        let person = {}
+        // let tom={}
+        person.tom = {}
+        person.tom.name = 'a'
+        person.tom.age = 12
+        person.jim = { ...person.tom }
+        person.detail = ''
+        console.log(person)
+    }
+    function method10() {
+        //     let jim={}
+        //     let tom={}
+        //     jim.name='jim'     
+        //     jim.age=19
+        //     tom.name='a'
+        //     tom.num=12
+
+        //   jim={...tom}
+        //   delete jim.num
+        //     console.log(jim)
+        // console.log(tom)
+
+        //     let arr=[1,1,2,3]
+        //    let arr2= arr.filter(x=>x==2).map(x=>x*2)
+        //    console.log(arr2)
+        //    console.log(typeof(arr2))
+
+        let arr3 = []
+        let map = new Map()
+        let map1 = new Map()
+        let map2 = new Map()
+        map.set('tom', 18)
+        map.set('jim', 19)
+        map.set('lucy', 20)
+        map1.set('jj', 18)
+        map1.set('loo', 19)
+        map2.set('cc', 20)
+        arr3.push(map)
+        arr3.push(map1)
+        arr3.push(map2)
+
+
+
+        let oo = arr3.filter(x => x.has('loo')).map(x => x.set('loo', 23))
+        //  console.log(oo)
+        //  console.log(arr3)
+
+        let res = arr3.filter(x => x.has('tom'))
+        //  console.log(res)
+        let val = res[0].set('tom', 15)
+        //  console.log(val)
+
+        //  console.log(arr3)
+
+        let val1 = arr3.filter(x => x.has('loo') && x.has('jj'))
+        console.log(val1)
+    }
+    function method11() {
+        const map0 = new Map()
+            .set(1, 'a')
+            .set(2, 'b')
+            .set(3, 'c');
+        console.log(map0)
+        let val = new Map(
+            [...map0].filter(([k, v]) => k < 2)
+        )
+        console.log(val)
+        console.log([map0.keys()])
+    }
+    function method12() {
+        // let arr = [1, 2, 3, -34]
+        // let num = arr.find(x => x < 0)
+        // console.log(num)
+        function f(v) {
+            return v > this.age;
+        }
+        let person = { name: 'John', age: 20 };
+        console.log([10, 12, 26, 15].find(f, person));
+    }
+
+    function method15() {
+        let total = [0, 1, 2, 3, 4].reduce((a, b) => a + b); //10
+        console.log(total)
+    }
+
+    function method16() {
+        const s = new Set();
+        [2, 3, 5, 4, 5, 2, 2].forEach(x => s.add(x));
+        for (let i of s) {
+            console.log(i);
+        }
+    }
+    function method17() {
+        let arr = [1, 9, 7, 4, 9, 2]
+        let se = new Set()
+        let val = arr.sort()
+        console.log(val)
+        val.forEach(x => se.add(x))
+        for (const iterator of se) {
+            console.log(iterator)
+        }
+    }
+
+
+
+
+
+</script>
+<style>
+    .s1 {
+        display: inline-block;
+    }
+
+
+    .box {
+        border-style: solid;
+        border-width: 1px;
+        /* display: inline-block; */
+        width: 100px;
+        height: 100px;
+        background-color: #0000FF;
+        -webkit-transition: width 2s, height 2s,
+            background-color 2s, -webkit-transform 2s;
+        transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+    }
+
+    .box:hover {
+        background-color: #FFCCCC;
+        width: 200px;
+        height: 200px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(90deg);
+    }
+
+    .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: #00ff95;
+        /* display: inline-block; */
+        margin-left: 21px;
+    }
+
+    .a {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn1 {
+        height: 30px;
+        width: 80px;
+        margin-left: 35px
+    }
+
+
+    .s1 {
+        width: 100%
+    }
+</style>
