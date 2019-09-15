@@ -35,7 +35,7 @@
         <button class="btn1">按钮5</button>
         <button class="btn1">按钮6</button>
         <button class="btn1">按钮7</button>
-        <button class="btn1">按钮8</button>
+        <button class="btn1" onclick="open_win()">按钮8</button>
     </div>
        
 
@@ -70,7 +70,10 @@
     // method12();
     // method15();
     // method16();
-    method17();
+    // method17();
+    // method18();
+    // method19();
+    method20();
 
 
     function method3() {
@@ -266,19 +269,58 @@
         }
     }
     function method17() {
-        let arr = [1, 9, 7, 4, 9, 2,9]
-        let arr2=[2,3,4,5]
-        let se = new Set()
-        let val = arr.sort()
-        console.log(val)
-        val.forEach(x => se.add(x))
-        for (const iterator of se) {
-            console.log(iterator)
-        }
+        // let arr = [1, 9, 7, 4, 9, 2,9]
+        // let arr2=[2,3,4,5]
+        // let se = new Set()
+        // let val = arr.sort()
+        // console.log(val)
+        // val.forEach(x => se.add(x))
+        // for (const iterator of se) {
+        //     console.log(iterator)
+        // }
+        let jim = { status: false, status1: false }
+        console.log(jim)
+        console.log(Object.values(jim))
+        let arr2 = Object.values(jim).map(x => x = true)
+        console.log(arr2)
+    }
+    function method18() {
+        let tom = { status: false, status1: false }
+        let jim = { status: true }
+        let val = Object.assign(tom, jim)
+        // console.log(val)
+        // const merge =
+        //     (tom, ...jim) => Object.assign(tom, ...jim);
+        //     console.log(merge)
+        let arr = Object.entries(tom)
+        // console.log(arr)
+
+        const entries = new Map([
+            ['foo', 'bar'],
+            ['baz', 42]
+        ]);
+        let dto = Object.fromEntries(entries)
+        console.log(dto)
+    }
+    function method19() {
+        // const s = new Set();
+        // [1, 2, 3, 4].forEach(x => s.add(x))
+        // for (const iterator of s) {
+        //     console.log(iterator)
+        // }
+       let arr1 = [1,2,4,56,9].filter(x=>x>5)
+       console.log(arr1)
+       let arr2 = [1,2,4,56,9].filter(x=>x>5).map(x=>x*2)
+       console.log(arr2)
     }
 
+    function open_win() {
+        window.open("http://www.baidu.com")
+    }
+    
+    function method20() {
 
-
+    }
 
 
 </script>
