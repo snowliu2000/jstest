@@ -36,7 +36,38 @@
         <button class="btn1">按钮6</button>
         <button class="btn1">按钮7</button>
         <button class="btn1" onclick="open_win()">按钮8</button>
+        <button class="btn1">按钮9</button>
+        <button class="btn1">按钮10</button>
+        <button class="btn1">按钮11</button>
+        <button class="btn1">按钮12</button>
     </div>
+    <div class="en">
+        <div class="enbtn1">
+            <button>1</button>
+        </div>
+        <div class="enbtn2">
+            <button>2</button>
+        </div>
+    </div>
+
+    <!-- <video src="http://1253465307.vod2.myqcloud.com/e252b26bvodtransgzp1253465307/188b415e5285890783349606949/v.f30.mp4" 
+    height="400px"
+    width="800px"
+    controls="controls">视频</video>
+
+    <video 
+    height="400px"
+    width="800px"
+    controls="controls" 
+ src="E:/xuechengvideo/video/test/88.mp4"> 
+ >视频</video>
+
+    <video 
+    height="400px"
+    width="800px"
+    controls="controls" 
+ src="http://res.vbook.art/audio/c615e38c-a785-4641-b826-fd0d1254d56c_en.m4a"> 
+ >视频</video> -->
        
 
 
@@ -45,6 +76,7 @@
 </body>
 
 </html>
+<script src="https://cdn.bdstatic.com/jwplayer/latest/cyberplayer.js"></script>
 <script>
     function method1() {
         alert(1)
@@ -73,7 +105,35 @@
     // method17();
     // method18();
     // method19();
-    method20();
+    // method20();
+    // method21();
+    // method22();
+    // method23();
+    // method24();
+    // method25();
+    // method26();
+    // method27();
+    // method28();
+    // method29();
+    // method30();
+    // method31();
+    // method32();
+    // method33();
+    // method34();
+    // method35();
+    // method36();
+    // method37();
+    // method38();
+    // method39();
+    // method40();
+    // method41();
+    // method42();
+    // method43();
+    // method44();
+    // method45();
+    // method46();
+    //  method47();
+     method48();
 
 
     function method3() {
@@ -217,6 +277,8 @@
         arr3.push(map1)
         arr3.push(map2)
 
+        console.log(arr3)
+
 
 
         let oo = arr3.filter(x => x.has('loo')).map(x => x.set('loo', 23))
@@ -231,7 +293,7 @@
         //  console.log(arr3)
 
         let val1 = arr3.filter(x => x.has('loo') && x.has('jj'))
-        console.log(val1)
+        // console.log(val1)
     }
     function method11() {
         const map0 = new Map()
@@ -308,22 +370,910 @@
         // for (const iterator of s) {
         //     console.log(iterator)
         // }
-       let arr1 = [1,2,4,56,9].filter(x=>x>5)
-       console.log(arr1)
-       let arr2 = [1,2,4,56,9].filter(x=>x>5).map(x=>x*2)
-       console.log(arr2)
+        let arr1 = [1, 2, 4, 56, 9].filter(x => x > 5)
+        console.log(arr1)
+        let arr2 = [1, 2, 4, 56, 9].filter(x => x > 5).map(x => x * 2)
+        console.log(arr2)
     }
 
     function open_win() {
-        window.open("http://www.baidu1.com")
+        window.open("http://www.baidu.com")
     }
-    
+
     function method20() {
+        console.log(Math.max(...[1, 23, 4]));
+        console.log(Math.max(1, 23, 49));
+        let arr1 = [1, 2, 3]
+        let arr2 = [11, 22, 33]
+        let arr3 = arr1.push(arr2)
+        console.log(arr1)
+    }
+
+    function method21() {
+        console.log([...'jim'])
+    }
+
+    function method22() {
+        let obj = {
+            ['h' + 'ello']() {
+                return 'hi';
+            }
+        };
+        console.log(obj.hello());
+        console.log('=========');
+        const person = {
+            sayName() {
+                console.log('hello!');
+            },
+        };
+        console.log(person.sayName.name);
+    }
+
+    function method23() {
+        // let [foo, [[, bar], baz]] = [1, [[2, 4], 3]];
+        // console.log(foo)
+        // console.log(bar)
+        // console.log(baz)
+        // let [, , third] = ["foo", "bar", "baz"];
+        // console.log(third)
+        // // let [x, , y] = [1, 2, 3];
+        // // console.log(x + y)
+
+        // let [head, ...tail] = [1, 2, 3, 4];
+        // console.log(head)
+        // console.log(tail)
+
+
+        // let [x, y, ...z] = ['a'];
+        // console.log(x)
+        // console.log(y)
+        // console.log(z)
+        // let { name } = { name: 'jim', age: 12 }
+        // console.log(name)
+
+        // var { x = 3 } = {};
+        // console.log(x)
+
+        // var { x, y = 5 } = { x: 1 };
+
+
+        // var { x: y = 3 } = {};
+        // y // 3
+
+        let { x, y = 3 } = { y: 5 }
+        console.log(x)
+        console.log(y)
+        let { a: b = 3 } = { b: 5 }
+        console.log(x)
+        console.log(y)
+
+        var { m: n = 3 } = { m: 5 };
+        // console.log(m)
+        console.log(n)
+
+
+        // var { x: y = 3 } = { x: 5 };
+        // console.log(x)
+        let res = [[1, 2], [3, 4]].map(([a, b]) => a + b);
+        console.log(res)
+
+    }
+    function method24() {
+        let arr = [undefined, undefined, 3].map((x = 'yes') => x);
+        console.log(arr);
+        let str = 'abc'
+        console.log(typeof (str))
+        let num = 1
+        console.log(typeof (num))
+        let obj = {}
+        console.log(typeof (obj))
+    }
+
+    function method25() {
+        let x = 1;
+        let y = 2;
+        [x, y] = [y, x];
+        console.log(x);
+        console.log(y);
+    }
+
+
+    function method26() {
+        // 返回一个数组
+        function example_a() {
+            return [1, 2, 3];
+        }
+        let [a, b, c] = example_a();
+        console.log([a, b, c])
+        // 返回一个对象
+        function example_b() {
+            return {
+                foo: 1,
+                bar: 2
+            };
+        }
+        let { foo, bar } = example_b();
+        console.log({ foo, bar })
+
+        // 对json对象的赋值
+        let jsonData = {
+            id: 42,
+            status: "OK",
+            data: [867, 5309]
+        };
+
+        let { id, status, data: num } = jsonData;
+        console.log({ id, status, num })
+    }
+
+    function method27() {
+        let x = 1
+        let y = 2
+        console.log(`${x}+${y}=${x + y}`)
+        console.log(...[1, 2, 3])
+        console.log([1, 2, 3])
+        console.log(1, 2, 3)
+    }
+
+
+    function method28() {
+        function push(array, ...items) {
+            array.push(...items);
+        }
+
+        function add(x, y) {
+            return x + y;
+        }
+
+        const numbers = [4, 38];
+        console.log(add(...numbers));
+    }
+
+    function method29() {
+        // const [first, ...rest] = [1, 2, 3, 4, 5];
+        // console.log([first])
+        // console.log(rest)
+
+        let map = new Map([
+            [1, 'one'],
+            [2, 'two'],
+            [3, 'three'],
+        ]);
+        console.log(map)
+        let arr = [...map.entries()];
+        console.log(arr)
+    }
+
+    function method30() {
+        let arrayLike = {
+            '0': 'a',
+            '1': 'b',
+            '2': 'c',
+            length: 3
+        };
+        let arr2 = Array.from(arrayLike);
+        console.log(arr2)
+
+        let obj = {
+            0: 'tom',
+            1: '20',
+            length: 2
+        }
+        let val = Array.from(obj)
+        console.log(val)
+    }
+
+    function method31() {
+        let res = [1, -4, -5, 10].find((n) => n < 0)
+        console.log(res)
+
+        let res1 = [1, 5, 10, 15].findIndex(function (value, index, arr) {
+            return value > 4;
+        })
+        console.log(res1)
+        console.log(Array(3))
+
 
     }
 
+    function method32() {
+        let res = [, 'a'].every(x => x === 'a')
+        console.log(res)
+    }
+
+    function method33() {
+        // const foo = 'bar';
+        // // const baz = { foo };
+
+        // // 等同于
+        // const baz = { foo: foo };
+        // console.log(baz)
+
+
+        const keyA = { a: 1 };
+        const keyB = { b: 2 };
+
+        const myObject = {
+            [keyA]: 'valueA',
+            [keyB]: 'valueB'
+        };
+
+        console.log(myObject)
+    }
+    function method34() {
+        let z = { a: 3, b: 4 };
+        let n = { ...z };
+        console.log(n)
+
+        const sym = Symbol('foo');
+        console.log(sym.description)
+    }
+    function method35() {
+        function add(x, y) {
+            return x + y;
+        }
+        let arr = [5, 5]
+        console.log(add(...arr))
+
+        console.log(add(...[8, 10]))
+        console.log([...arr])
+    }
+    function method36() {
+        // const a1 = [1, 2];
+        // const a2 = a1;
+        // a2[0] = 2;
+        const a1 = [1, 2];
+        // 写法一
+        const a2 = [...a1];
+        // // 写法二
+        // const [...a2] = a1;
+        // console.log(a1);
+        // console.log(a2);
+        let a3 = [...a1, ...a2]
+        console.log(a3)
+        let str = 'string'
+        console.log([...str])
+    }
+
+    function method37() {
+        let arr = [1, 2, [3, 4, [5, 6]]]
+        console.log(arr.flat(Infinity))
+    }
+    function method38() {
+        let arr = [,]
+        for (const iterator of arr) {
+            console.log(1)
+        }
+    }
+    function method39() {
+        let arr = []
+        function sum(n) {
+            arr.push(n)
+            if (n > 0) {
+                return n + sum(n - 1);
+            } else {
+                return 0;
+            }
+        }
+        console.log(arr)
+        console.log(sum(3))
+    }
+    function method40() {
+        let arr = [1, 2, 3]
+        console.log(arr)
+        let arr2 = [...arr]
+        console.log(...arr)
+        console.log(...arr2)
+
+    }
+
+    function method41() {
+
+        let arr1 = []
+        let arr2 = []
+        let data = []
+        let book1 = {}
+        let book2 = {}
+        book1.name = 'tom'
+        book1.status = 1
+        book2.name = 'jim'
+        book2.status = 2
+        arr1.push(book1)
+        arr1.push(book2);
+        // for (const iterator of arr1) {
+        //     iterator.name=iterator.name+'a'
+        // }
+        // arr1.forEach(x=>x.status=x.status+'')
+        arr1.map(x => x.status = x.status + '')
+        console.log(arr1)
+    }
+    function method42() {
+        let person = {}
+        person.name = 'tom'
+        person.age = 18
+        let person1 = {}
+        person1.name = 'jim'
+        person1.age = 29
+        let arr = []
+        arr.push(person)
+        arr.push(person1)
+        console.log(arr)
+        arr.map(x => x.n = x.name)
+        arr.map(x => x.m = x.age)
+        arr.map(x => delete x.name)
+        console.log(arr)
+    }
+    function method44() {
+        let arr = [1, 2, 3];
+        let getSum = (sum, x) => (sum + x)
+        console.log(getSum(1, 2))
+
+        //    let val= arr.reduce()
+        // console.log(res)
+        //    console.log(val)
+    }
+    function method45() {
+        var data = [{
+		"id": "1",
+		"title": "戏曲",
+		"pid": "0",
+		"node_deep": "1",
+		"nodes": [{
+			"id": "4",
+			"title": "楚剧",
+			"pid": "1",
+			"node_deep": "2",
+			"nodes": [{
+				"id": "7",
+				"title": "入门",
+				"pid": "4",
+				"node_deep": "3",
+				"nodes": [{
+					"id": "23",
+					"title": "01",
+					"pid": "7",
+					"node_deep": "4",
+					"nodes": []
+				}, {
+					"id": "24",
+					"title": "02",
+					"pid": "7",
+					"node_deep": "4",
+					"nodes": []
+				}, {
+					"id": "25",
+					"title": "03",
+					"pid": "7",
+					"node_deep": "4",
+					"nodes": []
+				}]
+			}, {
+				"id": "8",
+				"title": "初级",
+				"pid": "4",
+				"node_deep": "3",
+				"nodes": []
+			}, {
+				"id": "9",
+				"title": "中级",
+				"pid": "4",
+				"node_deep": "3",
+				"nodes": []
+			}, {
+				"id": "10",
+				"title": "高级",
+				"pid": "4",
+				"node_deep": "3",
+				"nodes": []
+			}]
+		}, {
+			"id": "5",
+			"title": "京剧",
+			"pid": "1",
+			"node_deep": "2",
+			"nodes": []
+		}, {
+			"id": "6",
+			"title": "越剧",
+			"pid": "1",
+			"node_deep": "2",
+			"nodes": []
+		}]
+	}, {
+		"id": "2",
+		"title": "乐器",
+		"pid": "0",
+		"node_deep": "1",
+		"nodes": [{
+			"id": "21",
+			"title": "笛子",
+			"pid": "2",
+			"node_deep": "2",
+			"nodes": []
+		}]
+	}, {
+		"id": "3",
+		"title": "声乐",
+		"pid": "0",
+		"node_deep": "1",
+		"nodes": []
+	}]
+    console.log(data)
+
+
+//const myMenuCode = ['1', '2']
+
+// const filterMenu = (data, menuCode) => {
+//     return data.filter(item => {
+//         return menuCode.indexOf(item.node_deep) > -1
+//     }).map(item => {
+//         item = Object.assign({}, item)
+//         if (item.nodes) {
+//             item.children = filterMenu(item.nodes, menuCode)
+//         }
+//         item.value=item.id
+//         item.label=item.title
+//         return item
+//     })
+// }
+
+
+const filterMenu = (data) => {
+    return data.filter(item => {
+        return item.node_deep < 3
+    }).map(item => {
+        item = Object.assign({}, item)
+        if (item.nodes) {
+            item.children = filterMenu(item.nodes)
+        }
+        item.value=item.id
+        item.label=item.title
+        return item
+    })
+}
+
+// 过滤后的菜单
+const options = filterMenu(data)
+
+console.log(options)
+
+
+    }
+
+    function  method46(){
+let params= [
+        {
+            "id": "1",
+            "group": "1",
+            "title": "戏曲",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176303",
+            "update_time": "1584176303",
+            "sort": "99999",
+            "pid": "0",
+            "pid_list": "0",
+            "sid_list": "0,4,5,6,7,8,9,10,11,12,13,14,15,17,18,19,23,24,25",
+            "node_deep": "1",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "戏曲"
+        },
+        {
+            "id": "4",
+            "group": "1",
+            "title": "楚剧",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176370",
+            "update_time": "1584176370",
+            "sort": "99996",
+            "pid": "1",
+            "pid_list": "0,1",
+            "sid_list": "0,7,8,9,10,11,12,13,14,15,17,18,19,23,24,25",
+            "node_deep": "2",
+            "small_img": "",
+            "synopsis": "好",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------楚剧"
+        },
+        {
+            "id": "7",
+            "group": "1",
+            "title": "入门",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176422",
+            "update_time": "1584176422",
+            "sort": "99993",
+            "pid": "4",
+            "pid_list": "0,1,4",
+            "sid_list": "0,11,12,13,23,24,25",
+            "node_deep": "3",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------------入门"
+        },
+        {
+            "id": "23",
+            "group": "1",
+            "title": "01",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584583023",
+            "update_time": "1584583023",
+            "sort": "99977",
+            "pid": "7",
+            "pid_list": "0,1,4,7",
+            "sid_list": "0",
+            "node_deep": "4",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------------------01"
+        },
+        {
+            "id": "24",
+            "group": "1",
+            "title": "02",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584583141",
+            "update_time": "1584583141",
+            "sort": "99976",
+            "pid": "7",
+            "pid_list": "0,1,4,7",
+            "sid_list": "0",
+            "node_deep": "4",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------------------02"
+        },
+        {
+            "id": "25",
+            "group": "1",
+            "title": "03",
+            "keywords": "",
+            "value": "",
+            "tip": "类型描述",
+            "create_time": "1584583225",
+            "update_time": "1584588093",
+            "sort": "99975",
+            "pid": "7",
+            "pid_list": "0,1,4,7",
+            "sid_list": "0",
+            "node_deep": "4",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------------------03"
+        },
+        {
+            "id": "8",
+            "group": "1",
+            "title": "初级",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176429",
+            "update_time": "1584176429",
+            "sort": "99992",
+            "pid": "4",
+            "pid_list": "0,1,4",
+            "sid_list": "0,14,15",
+            "node_deep": "3",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------------初级"
+        },
+        {
+            "id": "9",
+            "group": "1",
+            "title": "中级",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176435",
+            "update_time": "1584176435",
+            "sort": "99991",
+            "pid": "4",
+            "pid_list": "0,1,4",
+            "sid_list": "0,17,18,19",
+            "node_deep": "3",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------------中级"
+        },
+        {
+            "id": "10",
+            "group": "1",
+            "title": "高级",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176440",
+            "update_time": "1584176440",
+            "sort": "99990",
+            "pid": "4",
+            "pid_list": "0,1,4",
+            "sid_list": "0",
+            "node_deep": "3",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------------高级"
+        },
+        {
+            "id": "5",
+            "group": "1",
+            "title": "京剧",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176377",
+            "update_time": "1584176377",
+            "sort": "99995",
+            "pid": "1",
+            "pid_list": "0,1",
+            "sid_list": "0",
+            "node_deep": "2",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------京剧"
+        },
+        {
+            "id": "6",
+            "group": "1",
+            "title": "越剧",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176389",
+            "update_time": "1584176389",
+            "sort": "99994",
+            "pid": "1",
+            "pid_list": "0,1",
+            "sid_list": "0",
+            "node_deep": "2",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------越剧"
+        },
+        {
+            "id": "2",
+            "group": "1",
+            "title": "乐器",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176312",
+            "update_time": "1584176312",
+            "sort": "99998",
+            "pid": "0",
+            "pid_list": "0",
+            "sid_list": "0,21",
+            "node_deep": "1",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "乐器"
+        },
+        {
+            "id": "21",
+            "group": "1",
+            "title": "笛子",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584343640",
+            "update_time": "1584343640",
+            "sort": "99979",
+            "pid": "2",
+            "pid_list": "0,2",
+            "sid_list": "0",
+            "node_deep": "2",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "------笛子"
+        },
+        {
+            "id": "3",
+            "group": "1",
+            "title": "声乐",
+            "keywords": "",
+            "value": "",
+            "tip": "",
+            "create_time": "1584176320",
+            "update_time": "1584176320",
+            "sort": "99997",
+            "pid": "0",
+            "pid_list": "0",
+            "sid_list": "0",
+            "node_deep": "1",
+            "small_img": "",
+            "synopsis": "",
+            "description": "",
+            "origin_time": "",
+            "area": "",
+            "cultural_level": "",
+            "legacy_level": "",
+            "big_img": "",
+            "paragraph_title": "详细描述",
+            "title_show": "声乐"
+        }
+    ]
+
+
+
+this.generateOptions(params) 
+
+
+
+    }
+  function  generateOptions(params) {//生成Cascader级联数据
+                var result = [];
+                for (let param of params) {
+                    if (param.pid == 0) {//判断是否为顶层节点
+                        var parent = {//转换成el-Cascader可以识别的数据结构
+                            'label': param.title,
+                            'value': param.id
+                        }
+                        parent.children = this.getchilds(param.id, params);//获取子节点
+                        result.push(parent);
+                    }
+                }
+                return result;
+            }
+ 
+         function  getchilds(id, array) {
+                let childs = new Array();
+                for (let arr of array) {//循环获取子节点
+                    if (arr.pid == id) {
+                        childs.push({
+                            'label': arr.title,
+                            'value': arr.id
+                        });
+                    }
+                }
+                for (let child of childs) {//获取子节点的子节点
+                    let childscopy = this.getchilds(child.value, array);//递归获取子节点
+                    console.log(childscopy)
+                    if (childscopy.length > 0) {
+                        child.children = childscopy;
+                    }
+                }
+                return childs;
+            }
+
+
+function method47(){
+        var arr = [
+            { name:"小明", age:12 },
+            { name:"小红", age:11 },
+            { name:"小刚", age:15 },
+            { name:"小华", age:13 }
+        ];
+// function compare(p){ //这是比较函数
+//     return function(m,n){
+//         var a = m[p];
+//         var b = n[p];
+//         return a - b; //升序
+//     }
+// }
+arr.sort((a,b)=>(a.age-b.age));
+console.log(arr);
+}
+
+function method48(){
+   this.staircase(5,[1,3])
+}
+function staircase(n, X){
+    if(n < 0) {
+        return 0
+    }
+    else if(n == 0) {
+        return 1
+    }
+    else{
+        for (const x in X) {
+            return sum(staircase(n - x, X)
+        }
+    }
+}
 
 </script>
+<style lang=""></style>
 <style>
     .s1 {
         display: inline-block;
@@ -373,5 +1323,10 @@
 
     .s1 {
         width: 100%
+    }
+
+    .en {
+        display: flex;
+
     }
 </style>
